@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+<meta name="description" content="Triangle Universities Nuclear Laboratory : 2011">
+
+      <title>Triangle Universities Nuclear Laboratory : 2011</title>
+
+<link rel="stylesheet" type="text/css" href="style.tunl.2011a.css" media="screen">
+<base href="http://www.tunl.duke.edu/public/mo/tunl/web.tunl.2011a.php">
+<script type="text/javascript" src="jquery-1.5.2.js"></script>
+<script type="text/javascript" src="jquery.infinitecarousel2.min.js"></script>
+<script type="text/javascript" src="jquery.infinitecarousel2.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#carousel').infiniteCarousel();
+        $('div.thumb').parent().css({'margin':'0 auto','width':'400px','float':'right'});
+
+});
+</script>
+<script>
+function removeFocusOnAllLinks(){
+for(var i=0 ; i < document.links.length ; i++) 
+document.links[i].onfocus=blurLink; 
+}
+
+function blurLink() {
+if (this.blur) this.blur(); 
+}
+
+window.onload=removeFocusOnAllLinks;
+</script>
+
+<script language="javascript" type="text/javascript">
+<!--
+function popitup(url) {
+        newwindow=window.open(url,'name','height=600,width=700,scrollbars=yes');
+        if (window.focus) {newwindow.focus()}
+        return false;
+}
+
+// -->
+</script>
+</head>
+
+
+<body onLoad="swapPic();swapPic2()">
+
+<div id="main_container">
+
+	<div id="header">
+    	<a href="http://www.tunl.duke.edu/"><img src="images/tunl2011/header.png"" alt="" title="" border="0"></a>
+        </div>
+
+<div id="story5000">
+
+<div id="menu">
+            <ul>
+                <li><a href="http://www.tunl.duke.edu/" onfocus="this.blur()" title="">Home</a><font size="5" color= "yellow">|</font></li>
+                <li><a href="http://www.tunl.duke.edu/web.tunl.2011a.visitor.php" onfocus="this.blur()" title="">Visitors</a><font size="5" color= "yellow">|</font></li>
+                <li><a  href="http://www.tunl.duke.edu/web.tunl.2011a.edu.php" onfocus="this.blur()" title="">Graduate Studies</a><font size="5" color= "yellow">|</font></li>
+                <li><a class="current" href="http://www.tunl.duke.edu/web.tunl.2011a.reu.php" onfocus="this.blur()" title="">REU</a><font size="5" color= "yellow">|</font></li>
+                <li><a href="http://www.tunl.duke.edu/nucldata/" onfocus="this.blur()" title="">Nuclear Data Evaluation</a><font size="5" color= "yellow">|</font></li>
+                <li><a href="http://www.tunl.duke.edu/web.tunl.2011a.pub.php" onfocus="this.blur()" title="">Publications</a><font size="5" color= "yellow">|</font></li>
+                <li><a href="http://www.tunl.duke.edu/web.tunl.2011a.dir.php" onfocus="this.blur()" title="">Directory</a><font size="5" color= "yellow">|</font></li>
+
+            </ul>
+        </div>
+
+<div id="menu">
+            <ul>
+                <li><a href="http://www.tunl.duke.edu/field.php" onfocus="this.blur()" title="">FIELD</a><font size="5" color= "yellow">|</font></li>
+                <li><a href="http://www.tunl.duke.edu/magnet.php" onfocus="this.blur()" title="">MAGNET</a><font size="5" color= "yellow">|</font></li>
+                <li><a href="http://www.tunl.duke.edu/rkin.php" onfocus="this.blur()" title="">RKIN</a><font size="5" color= "yellow">|</font></li>
+            </ul>
+        </div>
+        <img src="images/tunl2011/seperator.png"" alt="" title="" border="0">
+
+        <div id="substory">
+
+<font color="white">
+<h2>RKIN Code for 2-Body Relativistic Kinematics Calculations</h2>
+
+
+
+<!---------------------------- PHP FORM for Upload ------------------------->
+
+<font color="white" size="3">
+<p><h3>Inputs to RKIN Code</h3><p><blockquote><h3>Reaction: 2H(g,n)1H</h3></blockquote><p><table width='600' cellpadding='5' cellspacing='5' border='1'><tr><th>AM(1)</th><th>AM(2)</th><th>AM(3)</th><th>AM(4)</th><th>EX</th><th>T1</th><th>Q</th><th>ECM</th></tr><tr><td>  0.000000</td><td>  2.014102</td><td>  1.008665</td><td>  1.007825</td><td>   0.000</td><td>  11.400</td><td>  -2.225</td><td>  11.366
+</td></tr></table><p><p><h3>Output of RKIN Code</h3><p><table width='600' cellpadding='5' cellspacing='5' border='1'><tr><th>Lab Angle (deg)</th><th>CM Angle (deg)</th><th>T3 (MeV)</th><th>Lab Ang4 (deg)</th><th>T4 (MeV)</th><th>SIGCM/SIGLAB</th></tr><tr><td>  0.000</td><td>  0.000</td><td>  5.146</td><td>180.000</td><td>  4.029</td><td> 0.8875
+</td></tr><tr><td>  1.000</td><td>  1.061</td><td>  5.146</td><td>178.869</td><td>  4.029</td><td> 0.8875
+</td></tr><tr><td>  2.000</td><td>  2.123</td><td>  5.146</td><td>177.738</td><td>  4.030</td><td> 0.8876
+</td></tr><tr><td>  3.000</td><td>  3.184</td><td>  5.145</td><td>176.607</td><td>  4.030</td><td> 0.8876
+</td></tr><tr><td>  4.000</td><td>  4.246</td><td>  5.145</td><td>175.477</td><td>  4.031</td><td> 0.8878
+</td></tr><tr><td>  5.000</td><td>  5.307</td><td>  5.144</td><td>174.346</td><td>  4.032</td><td> 0.8879
+</td></tr><tr><td>  6.000</td><td>  6.368</td><td>  5.143</td><td>173.216</td><td>  4.033</td><td> 0.8881
+</td></tr><tr><td>  7.000</td><td>  7.429</td><td>  5.141</td><td>172.086</td><td>  4.034</td><td> 0.8883
+</td></tr><tr><td>  8.000</td><td>  8.490</td><td>  5.140</td><td>170.957</td><td>  4.035</td><td> 0.8885
+</td></tr><tr><td>  9.000</td><td>  9.551</td><td>  5.138</td><td>169.828</td><td>  4.037</td><td> 0.8888
+</td></tr><tr><td> 10.000</td><td> 10.612</td><td>  5.137</td><td>168.699</td><td>  4.039</td><td> 0.8891
+</td></tr><tr><td> 11.000</td><td> 11.672</td><td>  5.135</td><td>167.571</td><td>  4.041</td><td> 0.8895
+</td></tr><tr><td> 12.000</td><td> 12.732</td><td>  5.132</td><td>166.443</td><td>  4.043</td><td> 0.8898
+</td></tr><tr><td> 13.000</td><td> 13.793</td><td>  5.130</td><td>165.316</td><td>  4.045</td><td> 0.8902
+</td></tr><tr><td> 14.000</td><td> 14.852</td><td>  5.127</td><td>164.189</td><td>  4.048</td><td> 0.8907
+</td></tr><tr><td> 15.000</td><td> 15.912</td><td>  5.125</td><td>163.063</td><td>  4.051</td><td> 0.8911
+</td></tr><tr><td> 16.000</td><td> 16.971</td><td>  5.122</td><td>161.938</td><td>  4.054</td><td> 0.8916
+</td></tr><tr><td> 17.000</td><td> 18.030</td><td>  5.119</td><td>160.814</td><td>  4.057</td><td> 0.8921
+</td></tr><tr><td> 18.000</td><td> 19.089</td><td>  5.115</td><td>159.690</td><td>  4.060</td><td> 0.8927
+</td></tr><tr><td> 19.000</td><td> 20.147</td><td>  5.112</td><td>158.567</td><td>  4.064</td><td> 0.8933
+</td></tr><tr><td> 20.000</td><td> 21.205</td><td>  5.108</td><td>157.446</td><td>  4.067</td><td> 0.8939
+</td></tr><tr><td> 21.000</td><td> 22.263</td><td>  5.104</td><td>156.325</td><td>  4.071</td><td> 0.8946
+</td></tr><tr><td> 22.000</td><td> 23.320</td><td>  5.100</td><td>155.205</td><td>  4.075</td><td> 0.8953
+</td></tr><tr><td> 23.000</td><td> 24.377</td><td>  5.096</td><td>154.086</td><td>  4.079</td><td> 0.8960
+</td></tr><tr><td> 24.000</td><td> 25.433</td><td>  5.092</td><td>152.968</td><td>  4.084</td><td> 0.8967
+</td></tr><tr><td> 25.000</td><td> 26.489</td><td>  5.087</td><td>151.851</td><td>  4.088</td><td> 0.8975
+</td></tr><tr><td> 26.000</td><td> 27.544</td><td>  5.083</td><td>150.735</td><td>  4.093</td><td> 0.8983
+</td></tr><tr><td> 27.000</td><td> 28.600</td><td>  5.078</td><td>149.621</td><td>  4.098</td><td> 0.8991
+</td></tr><tr><td> 28.000</td><td> 29.654</td><td>  5.073</td><td>148.508</td><td>  4.103</td><td> 0.9000
+</td></tr><tr><td> 29.000</td><td> 30.708</td><td>  5.068</td><td>147.396</td><td>  4.108</td><td> 0.9009
+</td></tr><tr><td> 30.000</td><td> 31.762</td><td>  5.062</td><td>146.285</td><td>  4.113</td><td> 0.9018
+</td></tr><tr><td> 31.000</td><td> 32.815</td><td>  5.057</td><td>145.176</td><td>  4.119</td><td> 0.9028
+</td></tr><tr><td> 32.000</td><td> 33.867</td><td>  5.051</td><td>144.068</td><td>  4.124</td><td> 0.9038
+</td></tr><tr><td> 33.000</td><td> 34.919</td><td>  5.045</td><td>142.961</td><td>  4.130</td><td> 0.9048
+</td></tr><tr><td> 34.000</td><td> 35.970</td><td>  5.039</td><td>141.856</td><td>  4.136</td><td> 0.9058
+</td></tr><tr><td> 35.000</td><td> 37.021</td><td>  5.033</td><td>140.753</td><td>  4.142</td><td> 0.9069
+</td></tr><tr><td> 36.000</td><td> 38.071</td><td>  5.027</td><td>139.651</td><td>  4.149</td><td> 0.9080
+</td></tr><tr><td> 37.000</td><td> 39.121</td><td>  5.021</td><td>138.550</td><td>  4.155</td><td> 0.9092
+</td></tr><tr><td> 38.000</td><td> 40.169</td><td>  5.014</td><td>137.451</td><td>  4.161</td><td> 0.9103
+</td></tr><tr><td> 39.000</td><td> 41.217</td><td>  5.007</td><td>136.354</td><td>  4.168</td><td> 0.9115
+</td></tr><tr><td> 40.000</td><td> 42.265</td><td>  5.000</td><td>135.258</td><td>  4.175</td><td> 0.9127
+</td></tr><tr><td> 41.000</td><td> 43.312</td><td>  4.994</td><td>134.164</td><td>  4.182</td><td> 0.9140
+</td></tr><tr><td> 42.000</td><td> 44.358</td><td>  4.986</td><td>133.071</td><td>  4.189</td><td> 0.9152
+</td></tr><tr><td> 43.000</td><td> 45.403</td><td>  4.979</td><td>131.981</td><td>  4.196</td><td> 0.9165
+</td></tr><tr><td> 44.000</td><td> 46.448</td><td>  4.972</td><td>130.892</td><td>  4.204</td><td> 0.9179
+</td></tr><tr><td> 45.000</td><td> 47.492</td><td>  4.964</td><td>129.805</td><td>  4.211</td><td> 0.9192
+</td></tr><tr><td> 46.000</td><td> 48.535</td><td>  4.957</td><td>128.719</td><td>  4.219</td><td> 0.9206
+</td></tr><tr><td> 47.000</td><td> 49.577</td><td>  4.949</td><td>127.636</td><td>  4.226</td><td> 0.9220
+</td></tr><tr><td> 48.000</td><td> 50.619</td><td>  4.941</td><td>126.554</td><td>  4.234</td><td> 0.9234
+</td></tr><tr><td> 49.000</td><td> 51.659</td><td>  4.933</td><td>125.474</td><td>  4.242</td><td> 0.9249
+</td></tr><tr><td> 50.000</td><td> 52.699</td><td>  4.925</td><td>124.396</td><td>  4.250</td><td> 0.9264
+</td></tr><tr><td> 51.000</td><td> 53.739</td><td>  4.917</td><td>123.320</td><td>  4.258</td><td> 0.9279
+</td></tr><tr><td> 52.000</td><td> 54.777</td><td>  4.909</td><td>122.246</td><td>  4.266</td><td> 0.9294
+</td></tr><tr><td> 53.000</td><td> 55.814</td><td>  4.901</td><td>121.174</td><td>  4.275</td><td> 0.9310
+</td></tr><tr><td> 54.000</td><td> 56.851</td><td>  4.892</td><td>120.104</td><td>  4.283</td><td> 0.9325
+</td></tr><tr><td> 55.000</td><td> 57.887</td><td>  4.884</td><td>119.036</td><td>  4.292</td><td> 0.9342
+</td></tr><tr><td> 56.000</td><td> 58.922</td><td>  4.875</td><td>117.970</td><td>  4.300</td><td> 0.9358
+</td></tr><tr><td> 57.000</td><td> 59.955</td><td>  4.866</td><td>116.905</td><td>  4.309</td><td> 0.9374
+</td></tr><tr><td> 58.000</td><td> 60.989</td><td>  4.858</td><td>115.843</td><td>  4.318</td><td> 0.9391
+</td></tr><tr><td> 59.000</td><td> 62.021</td><td>  4.849</td><td>114.783</td><td>  4.327</td><td> 0.9408
+</td></tr><tr><td> 60.000</td><td> 63.052</td><td>  4.840</td><td>113.725</td><td>  4.336</td><td> 0.9425
+</td></tr><tr><td> 61.000</td><td> 64.082</td><td>  4.831</td><td>112.669</td><td>  4.345</td><td> 0.9443
+</td></tr><tr><td> 62.000</td><td> 65.112</td><td>  4.822</td><td>111.616</td><td>  4.354</td><td> 0.9460
+</td></tr><tr><td> 63.000</td><td> 66.140</td><td>  4.812</td><td>110.564</td><td>  4.363</td><td> 0.9478
+</td></tr><tr><td> 64.000</td><td> 67.167</td><td>  4.803</td><td>109.514</td><td>  4.372</td><td> 0.9496
+</td></tr><tr><td> 65.000</td><td> 68.194</td><td>  4.794</td><td>108.467</td><td>  4.381</td><td> 0.9514
+</td></tr><tr><td> 66.000</td><td> 69.219</td><td>  4.785</td><td>107.421</td><td>  4.391</td><td> 0.9533
+</td></tr><tr><td> 67.000</td><td> 70.244</td><td>  4.775</td><td>106.378</td><td>  4.400</td><td> 0.9551
+</td></tr><tr><td> 68.000</td><td> 71.268</td><td>  4.766</td><td>105.337</td><td>  4.410</td><td> 0.9570
+</td></tr><tr><td> 69.000</td><td> 72.290</td><td>  4.756</td><td>104.298</td><td>  4.419</td><td> 0.9589
+</td></tr><tr><td> 70.000</td><td> 73.312</td><td>  4.747</td><td>103.261</td><td>  4.429</td><td> 0.9608
+</td></tr><tr><td> 71.000</td><td> 74.332</td><td>  4.737</td><td>102.227</td><td>  4.438</td><td> 0.9627
+</td></tr><tr><td> 72.000</td><td> 75.352</td><td>  4.728</td><td>101.194</td><td>  4.448</td><td> 0.9647
+</td></tr><tr><td> 73.000</td><td> 76.370</td><td>  4.718</td><td>100.164</td><td>  4.458</td><td> 0.9666
+</td></tr><tr><td> 74.000</td><td> 77.388</td><td>  4.708</td><td> 99.136</td><td>  4.467</td><td> 0.9686
+</td></tr><tr><td> 75.000</td><td> 78.404</td><td>  4.698</td><td> 98.110</td><td>  4.477</td><td> 0.9706
+</td></tr><tr><td> 76.000</td><td> 79.420</td><td>  4.689</td><td> 97.086</td><td>  4.487</td><td> 0.9726
+</td></tr><tr><td> 77.000</td><td> 80.434</td><td>  4.679</td><td> 96.065</td><td>  4.496</td><td> 0.9746
+</td></tr><tr><td> 78.000</td><td> 81.447</td><td>  4.669</td><td> 95.045</td><td>  4.506</td><td> 0.9767
+</td></tr><tr><td> 79.000</td><td> 82.459</td><td>  4.659</td><td> 94.028</td><td>  4.516</td><td> 0.9787
+</td></tr><tr><td> 80.000</td><td> 83.471</td><td>  4.650</td><td> 93.013</td><td>  4.526</td><td> 0.9808
+</td></tr><tr><td> 81.000</td><td> 84.481</td><td>  4.640</td><td> 92.000</td><td>  4.536</td><td> 0.9828
+</td></tr><tr><td> 82.000</td><td> 85.490</td><td>  4.630</td><td> 90.990</td><td>  4.546</td><td> 0.9849
+</td></tr><tr><td> 83.000</td><td> 86.498</td><td>  4.620</td><td> 89.981</td><td>  4.555</td><td> 0.9870
+</td></tr><tr><td> 84.000</td><td> 87.505</td><td>  4.610</td><td> 88.975</td><td>  4.565</td><td> 0.9891
+</td></tr><tr><td> 85.000</td><td> 88.511</td><td>  4.600</td><td> 87.970</td><td>  4.575</td><td> 0.9912
+</td></tr><tr><td> 86.000</td><td> 89.516</td><td>  4.591</td><td> 86.968</td><td>  4.585</td><td> 0.9934
+</td></tr><tr><td> 87.000</td><td> 90.519</td><td>  4.581</td><td> 85.968</td><td>  4.595</td><td> 0.9955
+</td></tr><tr><td> 88.000</td><td> 91.522</td><td>  4.571</td><td> 84.970</td><td>  4.604</td><td> 0.9976
+</td></tr><tr><td> 89.000</td><td> 92.524</td><td>  4.561</td><td> 83.975</td><td>  4.614</td><td> 0.9998
+</td></tr><tr><td> 90.000</td><td> 93.524</td><td>  4.551</td><td> 82.981</td><td>  4.624</td><td> 1.0019
+</td></tr><tr><td> 91.000</td><td> 94.524</td><td>  4.542</td><td> 81.990</td><td>  4.634</td><td> 1.0041
+</td></tr><tr><td> 92.000</td><td> 95.522</td><td>  4.532</td><td> 81.000</td><td>  4.644</td><td> 1.0062
+</td></tr><tr><td> 93.000</td><td> 96.519</td><td>  4.522</td><td> 80.013</td><td>  4.653</td><td> 1.0084
+</td></tr><tr><td> 94.000</td><td> 97.515</td><td>  4.513</td><td> 79.028</td><td>  4.663</td><td> 1.0106
+</td></tr><tr><td> 95.000</td><td> 98.511</td><td>  4.503</td><td> 78.045</td><td>  4.673</td><td> 1.0127
+</td></tr><tr><td> 96.000</td><td> 99.505</td><td>  4.493</td><td> 77.063</td><td>  4.682</td><td> 1.0149
+</td></tr><tr><td> 97.000</td><td>100.498</td><td>  4.484</td><td> 76.084</td><td>  4.692</td><td> 1.0171
+</td></tr><tr><td> 98.000</td><td>101.490</td><td>  4.474</td><td> 75.107</td><td>  4.701</td><td> 1.0193
+</td></tr><tr><td> 99.000</td><td>102.480</td><td>  4.465</td><td> 74.132</td><td>  4.711</td><td> 1.0214
+</td></tr><tr><td>100.000</td><td>103.470</td><td>  4.455</td><td> 73.159</td><td>  4.720</td><td> 1.0236
+</td></tr><tr><td>101.000</td><td>104.459</td><td>  4.446</td><td> 72.188</td><td>  4.729</td><td> 1.0258
+</td></tr><tr><td>102.000</td><td>105.447</td><td>  4.437</td><td> 71.219</td><td>  4.739</td><td> 1.0280
+</td></tr><tr><td>103.000</td><td>106.433</td><td>  4.427</td><td> 70.252</td><td>  4.748</td><td> 1.0302
+</td></tr><tr><td>104.000</td><td>107.419</td><td>  4.418</td><td> 69.287</td><td>  4.757</td><td> 1.0323
+</td></tr><tr><td>105.000</td><td>108.404</td><td>  4.409</td><td> 68.324</td><td>  4.766</td><td> 1.0345
+</td></tr><tr><td>106.000</td><td>109.387</td><td>  4.400</td><td> 67.363</td><td>  4.776</td><td> 1.0367
+</td></tr><tr><td>107.000</td><td>110.370</td><td>  4.391</td><td> 66.404</td><td>  4.785</td><td> 1.0388
+</td></tr><tr><td>108.000</td><td>111.351</td><td>  4.382</td><td> 65.446</td><td>  4.794</td><td> 1.0410
+</td></tr><tr><td>109.000</td><td>112.332</td><td>  4.373</td><td> 64.491</td><td>  4.802</td><td> 1.0431
+</td></tr><tr><td>110.000</td><td>113.311</td><td>  4.364</td><td> 63.537</td><td>  4.811</td><td> 1.0452
+</td></tr><tr><td>111.000</td><td>114.289</td><td>  4.355</td><td> 62.585</td><td>  4.820</td><td> 1.0474
+</td></tr><tr><td>112.000</td><td>115.267</td><td>  4.347</td><td> 61.635</td><td>  4.829</td><td> 1.0495
+</td></tr><tr><td>113.000</td><td>116.243</td><td>  4.338</td><td> 60.687</td><td>  4.837</td><td> 1.0516
+</td></tr><tr><td>114.000</td><td>117.219</td><td>  4.330</td><td> 59.740</td><td>  4.846</td><td> 1.0537
+</td></tr><tr><td>115.000</td><td>118.193</td><td>  4.321</td><td> 58.795</td><td>  4.854</td><td> 1.0558
+</td></tr><tr><td>116.000</td><td>119.167</td><td>  4.313</td><td> 57.852</td><td>  4.863</td><td> 1.0579
+</td></tr><tr><td>117.000</td><td>120.139</td><td>  4.305</td><td> 56.911</td><td>  4.871</td><td> 1.0599
+</td></tr><tr><td>118.000</td><td>121.111</td><td>  4.296</td><td> 55.971</td><td>  4.879</td><td> 1.0620
+</td></tr><tr><td>119.000</td><td>122.081</td><td>  4.288</td><td> 55.033</td><td>  4.887</td><td> 1.0640
+</td></tr><tr><td>120.000</td><td>123.051</td><td>  4.280</td><td> 54.097</td><td>  4.895</td><td> 1.0660
+</td></tr><tr><td>121.000</td><td>124.020</td><td>  4.272</td><td> 53.162</td><td>  4.903</td><td> 1.0680
+</td></tr><tr><td>122.000</td><td>124.988</td><td>  4.265</td><td> 52.229</td><td>  4.911</td><td> 1.0700
+</td></tr><tr><td>123.000</td><td>125.955</td><td>  4.257</td><td> 51.298</td><td>  4.919</td><td> 1.0720
+</td></tr><tr><td>124.000</td><td>126.921</td><td>  4.249</td><td> 50.368</td><td>  4.926</td><td> 1.0740
+</td></tr><tr><td>125.000</td><td>127.886</td><td>  4.242</td><td> 49.439</td><td>  4.934</td><td> 1.0759
+</td></tr><tr><td>126.000</td><td>128.850</td><td>  4.234</td><td> 48.513</td><td>  4.941</td><td> 1.0778
+</td></tr><tr><td>127.000</td><td>129.813</td><td>  4.227</td><td> 47.587</td><td>  4.948</td><td> 1.0797
+</td></tr><tr><td>128.000</td><td>130.776</td><td>  4.220</td><td> 46.663</td><td>  4.956</td><td> 1.0816
+</td></tr><tr><td>129.000</td><td>131.738</td><td>  4.213</td><td> 45.741</td><td>  4.963</td><td> 1.0834
+</td></tr><tr><td>130.000</td><td>132.698</td><td>  4.206</td><td> 44.820</td><td>  4.970</td><td> 1.0853
+</td></tr><tr><td>131.000</td><td>133.658</td><td>  4.199</td><td> 43.900</td><td>  4.976</td><td> 1.0871
+</td></tr><tr><td>132.000</td><td>134.618</td><td>  4.192</td><td> 42.982</td><td>  4.983</td><td> 1.0889
+</td></tr><tr><td>133.000</td><td>135.576</td><td>  4.186</td><td> 42.065</td><td>  4.990</td><td> 1.0906
+</td></tr><tr><td>134.000</td><td>136.534</td><td>  4.179</td><td> 41.150</td><td>  4.996</td><td> 1.0924
+</td></tr><tr><td>135.000</td><td>137.491</td><td>  4.173</td><td> 40.235</td><td>  5.003</td><td> 1.0941
+</td></tr><tr><td>136.000</td><td>138.447</td><td>  4.167</td><td> 39.322</td><td>  5.009</td><td> 1.0957
+</td></tr><tr><td>137.000</td><td>139.402</td><td>  4.160</td><td> 38.411</td><td>  5.015</td><td> 1.0974
+</td></tr><tr><td>138.000</td><td>140.357</td><td>  4.154</td><td> 37.500</td><td>  5.021</td><td> 1.0990
+</td></tr><tr><td>139.000</td><td>141.311</td><td>  4.148</td><td> 36.591</td><td>  5.027</td><td> 1.1006
+</td></tr><tr><td>140.000</td><td>142.264</td><td>  4.143</td><td> 35.683</td><td>  5.033</td><td> 1.1022
+</td></tr><tr><td>141.000</td><td>143.216</td><td>  4.137</td><td> 34.776</td><td>  5.038</td><td> 1.1037
+</td></tr><tr><td>142.000</td><td>144.168</td><td>  4.132</td><td> 33.870</td><td>  5.044</td><td> 1.1053
+</td></tr><tr><td>143.000</td><td>145.120</td><td>  4.126</td><td> 32.965</td><td>  5.049</td><td> 1.1067
+</td></tr><tr><td>144.000</td><td>146.070</td><td>  4.121</td><td> 32.061</td><td>  5.054</td><td> 1.1082
+</td></tr><tr><td>145.000</td><td>147.020</td><td>  4.116</td><td> 31.159</td><td>  5.060</td><td> 1.1096
+</td></tr><tr><td>146.000</td><td>147.969</td><td>  4.111</td><td> 30.257</td><td>  5.065</td><td> 1.1110
+</td></tr><tr><td>147.000</td><td>148.918</td><td>  4.106</td><td> 29.356</td><td>  5.069</td><td> 1.1123
+</td></tr><tr><td>148.000</td><td>149.866</td><td>  4.101</td><td> 28.456</td><td>  5.074</td><td> 1.1136
+</td></tr><tr><td>149.000</td><td>150.814</td><td>  4.097</td><td> 27.558</td><td>  5.079</td><td> 1.1149
+</td></tr><tr><td>150.000</td><td>151.761</td><td>  4.092</td><td> 26.660</td><td>  5.083</td><td> 1.1162
+</td></tr><tr><td>151.000</td><td>152.707</td><td>  4.088</td><td> 25.763</td><td>  5.088</td><td> 1.1174
+</td></tr><tr><td>152.000</td><td>153.653</td><td>  4.084</td><td> 24.866</td><td>  5.092</td><td> 1.1186
+</td></tr><tr><td>153.000</td><td>154.599</td><td>  4.080</td><td> 23.971</td><td>  5.096</td><td> 1.1197
+</td></tr><tr><td>154.000</td><td>155.544</td><td>  4.076</td><td> 23.077</td><td>  5.100</td><td> 1.1208
+</td></tr><tr><td>155.000</td><td>156.488</td><td>  4.072</td><td> 22.183</td><td>  5.103</td><td> 1.1219
+</td></tr><tr><td>156.000</td><td>157.432</td><td>  4.068</td><td> 21.290</td><td>  5.107</td><td> 1.1229
+</td></tr><tr><td>157.000</td><td>158.376</td><td>  4.065</td><td> 20.397</td><td>  5.110</td><td> 1.1239
+</td></tr><tr><td>158.000</td><td>159.319</td><td>  4.062</td><td> 19.506</td><td>  5.114</td><td> 1.1248
+</td></tr><tr><td>159.000</td><td>160.262</td><td>  4.058</td><td> 18.614</td><td>  5.117</td><td> 1.1257
+</td></tr><tr><td>160.000</td><td>161.204</td><td>  4.055</td><td> 17.724</td><td>  5.120</td><td> 1.1266
+</td></tr><tr><td>161.000</td><td>162.146</td><td>  4.053</td><td> 16.834</td><td>  5.123</td><td> 1.1274
+</td></tr><tr><td>162.000</td><td>163.088</td><td>  4.050</td><td> 15.945</td><td>  5.126</td><td> 1.1282
+</td></tr><tr><td>163.000</td><td>164.029</td><td>  4.047</td><td> 15.056</td><td>  5.128</td><td> 1.1290
+</td></tr><tr><td>164.000</td><td>164.971</td><td>  4.045</td><td> 14.168</td><td>  5.131</td><td> 1.1297
+</td></tr><tr><td>165.000</td><td>165.911</td><td>  4.042</td><td> 13.280</td><td>  5.133</td><td> 1.1303
+</td></tr><tr><td>166.000</td><td>166.852</td><td>  4.040</td><td> 12.393</td><td>  5.135</td><td> 1.1310
+</td></tr><tr><td>167.000</td><td>167.792</td><td>  4.038</td><td> 11.506</td><td>  5.137</td><td> 1.1316
+</td></tr><tr><td>168.000</td><td>168.732</td><td>  4.036</td><td> 10.619</td><td>  5.139</td><td> 1.1321
+</td></tr><tr><td>169.000</td><td>169.672</td><td>  4.035</td><td>  9.733</td><td>  5.141</td><td> 1.1326
+</td></tr><tr><td>170.000</td><td>170.611</td><td>  4.033</td><td>  8.847</td><td>  5.142</td><td> 1.1331
+</td></tr><tr><td>171.000</td><td>171.551</td><td>  4.032</td><td>  7.962</td><td>  5.144</td><td> 1.1335
+</td></tr><tr><td>172.000</td><td>172.490</td><td>  4.030</td><td>  7.076</td><td>  5.145</td><td> 1.1338
+</td></tr><tr><td>173.000</td><td>173.429</td><td>  4.029</td><td>  6.191</td><td>  5.146</td><td> 1.1342
+</td></tr><tr><td>174.000</td><td>174.368</td><td>  4.028</td><td>  5.306</td><td>  5.147</td><td> 1.1344
+</td></tr><tr><td>175.000</td><td>175.307</td><td>  4.027</td><td>  4.422</td><td>  5.148</td><td> 1.1347
+</td></tr><tr><td>176.000</td><td>176.246</td><td>  4.027</td><td>  3.537</td><td>  5.149</td><td> 1.1349
+</td></tr><tr><td>177.000</td><td>177.184</td><td>  4.026</td><td>  2.653</td><td>  5.149</td><td> 1.1350
+</td></tr><tr><td>178.000</td><td>178.123</td><td>  4.026</td><td>  1.769</td><td>  5.150</td><td> 1.1351
+</td></tr><tr><td>179.000</td><td>179.061</td><td>  4.026</td><td>  0.884</td><td>  5.150</td><td> 1.1352
+</td></tr><tr><td>180.000</td><td>180.000</td><td>  4.026</td><td>  0.000</td><td>  5.150</td><td> 1.1352
+</td></tr></table><p> 
+<!---------------------------- end PHP FORM for Upload ------------------------->
+
+</font>
+        </div>
+</div> 
+
+</div> <!--end of main container-->
+
+</body></html>
