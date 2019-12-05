@@ -1,8 +1,6 @@
 #ifndef PMPrimaryGeneratorAction_h
 #define PMPrimaryGeneratorAction_h 1
 
-#include <memory>
-
 #include <TF2.h>
 #include <TGraph2D.h>
 
@@ -12,6 +10,7 @@
 #include <G4Threading.hh>
 #include <G4ThreeVector.hh>
 #include <G4VUserPrimaryGeneratorAction.hh>
+#include <memory>
 
 class PMPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
@@ -22,7 +21,8 @@ class PMPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
   virtual void GeneratePrimaries(G4Event *);
 
  private:
-  G4ParticleGun *fParticleGun;
+  // G4ParticleGun *fParticleGun;
+  std::unique_ptr<G4ParticleGun> fParticleGun;
   G4double fGammaEne;
   G4double fGammaSigma;
   G4bool fUnpolarizedFlag;

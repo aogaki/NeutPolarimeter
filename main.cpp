@@ -1,6 +1,5 @@
-#include <random>
-
 #include <Randomize.hh>
+#include <random>
 
 #ifdef G4MULTITHREADED
 #include <G4MTRunManager.hh>
@@ -65,7 +64,7 @@ int main(int argc, char **argv)
 // Construct the default run manager
 #ifdef G4MULTITHREADED
   auto runManager = new G4MTRunManager();
-  // runManager->SetNumberOfThreads(G4Threading::G4GetNumberOfCores());
+  runManager->SetNumberOfThreads(G4Threading::G4GetNumberOfCores());
   // runManager->SetNumberOfThreads(8);
 #else
   auto runManager = new G4RunManager();

@@ -1,13 +1,12 @@
 #ifndef PMDetectorConstruction_h
 #define PMDetectorConstruction_h 1
 
-#include <vector>
-
 #include <G4GenericMessenger.hh>
 #include <G4Material.hh>
 #include <G4VPhysicalVolume.hh>
 #include <G4VUserDetectorConstruction.hh>
 #include <G4VisAttributes.hh>
+#include <vector>
 
 class PMDetectorConstruction : public G4VUserDetectorConstruction
 {
@@ -20,6 +19,9 @@ class PMDetectorConstruction : public G4VUserDetectorConstruction
 
  private:
   G4bool fCheckOverlap;
+
+  // Distance detector <-> target (center to center)
+  G4double fDetDistance;
 
   // Materials
   void DefineMaterials();

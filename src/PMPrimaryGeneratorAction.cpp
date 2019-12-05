@@ -1,5 +1,3 @@
-#include <random>
-
 #include <TFile.h>
 #include <TRandom3.h>
 
@@ -9,8 +7,9 @@
 #include <G4ParticleTable.hh>
 #include <G4SystemOfUnits.hh>
 #include <Randomize.hh>
-
 #include <g4root.hh>
+#include <random>
+
 #include "PMPrimaryGeneratorAction.hpp"
 
 static G4int nEveInPGA = 0;
@@ -20,13 +19,13 @@ G4Mutex mutexCounter = G4MUTEX_INITIALIZER;
 
 PMPrimaryGeneratorAction::PMPrimaryGeneratorAction(G4double beamEne,
                                                    G4bool unpolarizedFlag)
-    : G4VUserPrimaryGeneratorAction(), fParticleGun(nullptr)
+    : G4VUserPrimaryGeneratorAction()
 {
   fUnpolarizedFlag = unpolarizedFlag;
   fGammaEne = beamEne * MeV;
   fGammaSigma = beamEne * 0.005 / (2 * sqrt(2 * log(2)));
 
-  fParticleGun = new G4ParticleGun(1);
+  fParticleGun.reset(new G4ParticleGun(1));
   auto particleTable = G4ParticleTable::GetParticleTable();
   auto particle = particleTable->FindParticle("neutron");
   fParticleGun->SetParticleDefinition(particle);
@@ -52,7 +51,7 @@ PMPrimaryGeneratorAction::PMPrimaryGeneratorAction(G4double beamEne,
   delete file;
 }
 
-PMPrimaryGeneratorAction::~PMPrimaryGeneratorAction() { delete fParticleGun; }
+PMPrimaryGeneratorAction::~PMPrimaryGeneratorAction() {}
 
 void PMPrimaryGeneratorAction::GenBeam()
 {

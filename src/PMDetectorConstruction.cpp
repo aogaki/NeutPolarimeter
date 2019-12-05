@@ -23,6 +23,11 @@ PMDetectorConstruction::PMDetectorConstruction()
 PMDetectorConstruction::~PMDetectorConstruction()
 {
   for (auto &&pointer : fVisAttributes) delete pointer;
+
+  // Needed?
+  delete fWorldMat;
+  delete fTargetMat;
+  delete fScintiMat;
 }
 
 void PMDetectorConstruction::DefineMaterials()
@@ -87,6 +92,7 @@ G4VPhysicalVolume *PMDetectorConstruction::Construct()
   detLV->SetVisAttributes(visAttributes);
   fVisAttributes.push_back(visAttributes);
 
+  // 0 and 90 degrees
   for (auto i = 0; i < 2; i++) {
     auto detCenter = 70 * cm;
     auto detPhi = i * 90.0 * deg;
@@ -101,6 +107,19 @@ G4VPhysicalVolume *PMDetectorConstruction::Construct()
     new G4PVPlacement(rotMat, detPos, detLV, "Detector" + std::to_string(i),
                       worldLV, false, 0, fCheckOverlap);
   }
+
+  // 225 deg
+  auto detCenter = 70 * cm;
+  auto detPhi = 225. * deg;
+
+  auto rotMat = new G4RotationMatrix();
+  rotMat->rotateY(90.0 * deg);
+  rotMat->rotateX(135.0 * deg);
+
+  auto detPos =
+      G4ThreeVector(detCenter * cos(detPhi), detCenter * sin(detPhi), 0.);
+  new G4PVPlacement(rotMat, detPos, detLV, "Detector3", worldLV, false, 0,
+                    fCheckOverlap);
 
   G4VPhysicalVolume *worldPV = new G4PVPlacement(
       nullptr, G4ThreeVector(), worldLV, "World", 0, false, 0, fCheckOverlap);
