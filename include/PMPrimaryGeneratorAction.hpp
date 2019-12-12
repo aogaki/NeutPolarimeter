@@ -34,6 +34,7 @@ class PMPrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 
   std::unique_ptr<TGraph2D> fKEneAng;
   std::unique_ptr<TF2> fAngDist;
+  std::unique_ptr<TF1> fAzimuthal;
 };
 
 #endif

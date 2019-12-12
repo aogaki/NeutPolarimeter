@@ -1,4 +1,5 @@
 #include <TFile.h>
+#include <TGraph.h>
 #include <TRandom3.h>
 
 #include <G4AutoLock.hh>
@@ -23,7 +24,7 @@ PMPrimaryGeneratorAction::PMPrimaryGeneratorAction(G4double beamEne,
 {
   fUnpolarizedFlag = unpolarizedFlag;
   fGammaEne = beamEne * MeV;
-  fGammaSigma = beamEne * 0.005 / (2 * sqrt(2 * log(2)));
+  fGammaSigma = fGammaEne * 0.005 / (2 * sqrt(2 * log(2)));
 
   fParticleGun.reset(new G4ParticleGun(1));
   auto particleTable = G4ParticleTable::GetParticleTable();
@@ -40,6 +41,8 @@ PMPrimaryGeneratorAction::PMPrimaryGeneratorAction(G4double beamEne,
   fAngDist->SetParameter(2, 0.);
   fAngDist->SetNpx(1000);
   fAngDist->SetNpy(1000);
+  // fAngDist->SetRange(0., 0., CLHEP::pi, CLHEP::pi2);
+  fAngDist->SetRange(80. * deg, 0., 100. * deg, CLHEP::pi2);
 
   std::random_device rndSeed;
   gRandom->SetSeed(rndSeed());
@@ -47,6 +50,12 @@ PMPrimaryGeneratorAction::PMPrimaryGeneratorAction(G4double beamEne,
   auto file = new TFile("KEneAng.root", "READ");
   fKEneAng.reset((TGraph2D *)file->Get("KEneAng"));
   fKEneAng->SetDirectory(0);
+  file->Close();
+  delete file;
+
+  file = new TFile("AzimResults.root", "READ");
+  auto graph = (TGraph *)file->Get(Form("%2.2fMeV", beamEne));
+  fAzimuthal.reset(graph->GetFunction("fitFnc"));
   file->Close();
   delete file;
 }
@@ -68,13 +77,25 @@ void PMPrimaryGeneratorAction::GeneratePrimaries(G4Event *event)
   auto beamPos = G4ThreeVector(beamR * cos(posTheta), beamR * sin(posTheta),
                                (G4UniformRand() * 3.7 - 3.7 / 2.0) * cm);
   // GenBeam();
+
   fAngDist->GetRandom2(fBeamTheta, fBeamPhi);
-  fBeamEne = fKEneAng->Interpolate(fBeamTheta * 180 / CLHEP::pi,
-                                   gRandom->Gaus(fGammaEne, fGammaSigma));
-  if (fUnpolarizedFlag) fBeamPhi = G4UniformRand() * CLHEP::pi2;
+  // auto angLimit = 20. * deg;
+  // fBeamTheta = acos(1. - G4UniformRand() * (1. - cos(angLimit))) + 80. * deg;
+  //
+  // if (fUnpolarizedFlag) {
+  //   fBeamPhi = G4UniformRand() * CLHEP::pi2;
+  // } else {
+  //   G4AutoLock lock(&mutexGen);
+  //   fBeamPhi = fAzimuthal->GetRandom() * deg;
+  //   lock.unlock();
+  // }
+  // if (gRandom->Integer(2) == 0) fBeamPhi = -fBeamPhi;
 
   auto beamP = G4ThreeVector(sin(fBeamTheta) * cos(fBeamPhi),
                              sin(fBeamTheta) * sin(fBeamPhi), cos(fBeamTheta));
+
+  fBeamEne = fKEneAng->Interpolate(fBeamTheta * 180 / CLHEP::pi,
+                                   gRandom->Gaus(fGammaEne, fGammaSigma));
 
   fParticleGun->SetParticleEnergy(fBeamEne);
   fParticleGun->SetParticlePosition(beamPos);

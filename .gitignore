@@ -8,3 +8,7 @@ Makefile
 result*.root
 tmp.*
 Makefile
+Analysis/*.root
+Analysis/Original
+Analysis/UniformTheta
+Analysis/ThetaCut

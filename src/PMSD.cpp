@@ -30,29 +30,33 @@ void PMSD::Initialize(G4HCofThisEvent *hce)
 
 G4bool PMSD::ProcessHits(G4Step *step, G4TouchableHistory * /*history*/)
 {
-  auto newHit = new PMHit();
-
-  auto preStepPoint = step->GetPreStepPoint();
-  auto volumeName = preStepPoint->GetPhysicalVolume()->GetName();
-  newHit->SetVolumeName(volumeName);
-
-  auto track = step->GetTrack();
-  auto particle = track->GetDefinition();
-  auto pdgCode = particle->GetPDGEncoding();
-  newHit->SetPDGCode(pdgCode);
-
-  auto trackID = track->GetTrackID();
-  newHit->SetTrackID(trackID);
-  auto parentID = track->GetParentID();
-  newHit->SetParentID(parentID);
-
   auto depositEnergy = step->GetTotalEnergyDeposit();
-  newHit->SetDepositEnergy(depositEnergy);
+  if (depositEnergy > 0.) {
+    auto newHit = new PMHit();
 
-  auto postStepPoint = step->GetPostStepPoint();
-  auto time = postStepPoint->GetGlobalTime();
-  newHit->SetTime(time);
+    newHit->SetDepositEnergy(depositEnergy);
 
-  fHitsCollection->insert(newHit);
-  return true;
+    auto preStepPoint = step->GetPreStepPoint();
+    auto volumeName = preStepPoint->GetPhysicalVolume()->GetName();
+    newHit->SetVolumeName(volumeName);
+
+    auto track = step->GetTrack();
+    auto particle = track->GetDefinition();
+    auto pdgCode = particle->GetPDGEncoding();
+    newHit->SetPDGCode(pdgCode);
+
+    auto trackID = track->GetTrackID();
+    newHit->SetTrackID(trackID);
+    auto parentID = track->GetParentID();
+    newHit->SetParentID(parentID);
+
+    auto postStepPoint = step->GetPostStepPoint();
+    auto time = postStepPoint->GetGlobalTime();
+    newHit->SetTime(time);
+
+    fHitsCollection->insert(newHit);
+    return true;
+  } else {
+    return false;
+  }
 }

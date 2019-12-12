@@ -39,7 +39,7 @@ void PrintUsage()
 int main(int argc, char **argv)
 {
   G4String macro = "";
-  G4double beamEne = 0.;
+  G4double beamEne = 10.;
   G4bool unpolarizedFlag = false;
 
   for (G4int i = 1; i < argc; i++) {
